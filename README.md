@@ -58,9 +58,9 @@ To resolve this and ensure maximum reproducibility and simplicity, the original 
 
 ## Analysis Steps
 The project will follow a typical data analysis lifecycle:
-1.  **Data Acquisition & Sourcing** ✅ *(Current Stage)*
-2.  **Data Cleaning & Preprocessing** *(Handling missing values, duplicates, outliers)*
-3.  **Exploratory Data Analysis (EDA)** *(Uncovering patterns and trends through visualizations)*
+1.  **Data Acquisition & Sourcing** ✅ *
+2.  **Data Cleaning & Preprocessing** *(Handling missing values, duplicates, outliers)* 
+3.  **Exploratory Data Analysis (EDA)** *(Uncovering patterns and trends through visualizations)* ✅ *(Current Stage)*
 4.  **Feature Engineering** *(Creating RFM metrics: Recency, Frequency, Monetary Value)*
 5.  **Modeling** *(Using K-Means Clustering for customer segmentation)*
 6.  **Interpretation & Business Recommendations** *(Translating clusters into actionable strategies)*
@@ -81,3 +81,5 @@ The project will follow a typical data analysis lifecycle:
 
 ## Dashboard
 *The link to the final interactive Tableau Public dashboard will be placed here upon completion.*
+
+
