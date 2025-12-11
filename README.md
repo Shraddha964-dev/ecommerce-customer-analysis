@@ -96,6 +96,6 @@ The project will follow a typical data analysis lifecycle:
 - **Implementation Priority:** Q1 2024
 
 ## Dashboard
-![Customer Segmentation Dashboard](images/customer_segmentation_dashboard.png)
+![Customer Segmentation Dashboard](./images/customer_segmentation_dashboard.png)
 
 
