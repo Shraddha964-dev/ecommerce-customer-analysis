@@ -75,11 +75,27 @@ The project will follow a typical data analysis lifecycle:
     ```bash
     jupyter notebook notebooks/E-Commerce_Customer_Segmentation_project.ipynb
     ```
-
+    
 ## Key Insights & Recommendations
-*This section will be updated upon project completion with the final results and business strategies.*
+
+### Customer Segments Identified:
+1. **Champions (14.5%):** High-value VIP customers generating 60% of revenue
+2. **Loyal Customers (33.0%):** Regular buyers with strong growth potential  
+3. **New Customers (30.9%):** Recent acquisitions needing onboarding
+4. **At Risk (21.5%):** Inactive customers requiring reactivation
+
+### Strategic Recommendations:
+- **Protect Champions** with exclusive VIP benefits
+- **Grow Loyal Customers** through cross-selling
+- **Activate New Customers** with educational content
+- **Recover At-Risk** with targeted win-back campaigns
+
+### Financial Impact:
+- **Current Revenue:** £7.1M annually
+- **Potential Increase:** £420K+ (6% growth)
+- **Implementation Priority:** Q1 2024
 
 ## Dashboard
-*The link to the final interactive Tableau Public dashboard will be placed here upon completion.*
+![Customer Segmentation Dashboard](images/customer_segmentation_dashboard.png)
 
 
