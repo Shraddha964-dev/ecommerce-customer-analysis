@@ -1,103 +1,105 @@
-# ecommerce-customer-analysis
-An end-to-end data analysis project performing customer segmentation on UK e-commerce data to identify high-value and at-risk customers.
+# 🛒 E-Commerce Customer Segmentation Analysis
 
-# E-Commerce Customer Segmentation Analysis
+End-to-end customer segmentation on 1.07M+ UK retail transactions using 
+RFM analysis and K-Means clustering to identify high-value and at-risk customers.
 
-## Project Overview
-This end-to-end data analysis project performs customer segmentation on a UK-based online retail dataset. The goal is to move from a generic marketing strategy to a targeted one by identifying distinct customer groups based on their purchasing behavior. This allows for strategies to retain high-value customers and win back those at risk of churning.
+## 🚀 Live Dashboard
+👉 [View Interactive Dashboard](https://ecommerce-customer-analysis-jqzy8aeurhccjtmttyvzw3.streamlit.app/)
 
-Applied K-Means clustering to 1.07M+ transactions from 4,300+ UK retail customers. Identified 4 behavioral segments — Champion customers (14.5% of base) generate 60% of £7.1M annual revenue. Developed targeted reactivation strategy for At-Risk segment projected to recover £420K+ annually.
+---
 
-## Business Problem
-The business suffers from inefficient marketing spend by treating all customers the same. The analysis aims to answer:
-- Who are our most valuable customers?
-- Which customers are at risk of leaving?
-- How can we tailor marketing efforts to different segments to increase customer lifetime value (CLV) and reduce churn?
+## 📌 Key Results
 
-## Tech Stack
-- **Language:** Python
-- **Libraries:** Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
-- **Environment:** Jupyter Notebook
-- **Version Control:** Git & GitHub
-- **Visualization:** Tableau Public (Final Dashboard - Link to be added)
+| Segment | % of Customers | Revenue Contribution |
+|---|---|---|
+| Champions | 14.5% | 60% of £7.1M total |
+| Loyal Customers | 33.0% | Strong repeat spend |
+| New Customers | 30.9% | Recent acquisitions |
+| At Risk | 21.5% | £420K+ recoverable |
 
-## Project Structure
+**Projected revenue impact from targeted strategy: £420K+ annually (6% growth)**
+
+---
+
+## 🧩 Business Problem
+
+Most e-commerce businesses treat all customers the same — sending identical 
+promotions regardless of behavior. This wastes marketing budget and accelerates 
+churn among high-value customers.
+
+This project answers:
+- Who are our most valuable customers and what do they look like?
+- Which customers are about to leave — and how do we win them back?
+- How do we move from generic campaigns to targeted segment strategies?
+
+---
+
+## 🔍 Analysis Steps
+
+1. **Data Cleaning** — handled 1.07M+ rows, missing CustomerIDs, 
+   negative quantities, duplicate invoices
+2. **Exploratory Data Analysis** — revenue trends, top products, 
+   country distribution, seasonal patterns
+3. **Feature Engineering** — built RFM metrics (Recency, Frequency, 
+   Monetary Value) per customer
+4. **Modeling** — K-Means clustering with Elbow Method + Silhouette 
+   Score to find optimal k=4
+5. **Interpretation** — mapped clusters to business segments, 
+   quantified revenue impact per segment
+6. **Dashboard** — deployed interactive Streamlit app for non-technical stakeholders
+
+---
+
+## 🛠️ Tech Stack
+
+| Tool | Purpose |
+|---|---|
+| Python (Pandas, NumPy) | Data cleaning & feature engineering |
+| Scikit-learn | K-Means clustering, scaling |
+| Matplotlib, Seaborn | EDA visualizations |
+| Streamlit | Interactive dashboard deployment |
+| Jupyter Notebook | Analysis environment |
+| Git & GitHub | Version control |
+
+---
+
+## 📁 Project Structure
+```
 ecommerce-customer-analysis/
+├── app.py                          # Streamlit dashboard
+├── requirements.txt                # Dependencies
 ├── data/
-│ ├── raw/ # Original, immutable data dump
-│ └── processed/ # Cleaned data (to be added)
-├── notebooks/
-│ └── 01_data_cleaning_eda.ipynb # Main analysis notebook
-├── scripts/ # Optional helper scripts
-├── images/ # Visualizations and graphs
-├── README.md # Project documentation (you are here)
-└── .gitignore # Specifies files to ignore in version control
+│   ├── raw/                        # Original dataset
+│   └── processed/
+│       └── rfm_clustered.csv       # Final clustered data
+├── notebooks/                      # Jupyter analysis notebooks
+├── images/                         # Visualizations
+└── README.md
+```
 
+## ▶️ How to Run Locally
+```bash
+git clone https://github.com/Shraddha964-dev/ecommerce-customer-analysis.git
+cd ecommerce-customer-analysis
+pip install -r requirements.txt
+streamlit run app.py
+```
 
-## Data Sourcing
+---
 
-**Dataset:** [Online Retail II Data Set](https://archive.ics.uci.edu/dataset/502/online+retail+ii) from the UCI Machine Learning Repository.
+## 📊 Dataset
 
-**Description:** The dataset contains all transactions occurring between 01/12/2009 and 09/12/2011 for a UK-based online retail store. It includes ~1.07 million transactions across 8 columns, including `InvoiceNo`, `StockCode`, `Description`, `Quantity`, `InvoiceDate`, `UnitPrice`, `CustomerID`, and `Country`.
+**Source:** [UCI Machine Learning Repository — Online Retail II](https://archive.ics.uci.edu/dataset/502/online+retail+ii)  
+**Size:** ~1.07 million transactions · 4,300+ unique customers  
+**Period:** December 2009 – December 2011 · UK-based online retailer
 
-**Data Description**
-The dataset comprises approximately 1.07 million transactions across 8 columns. The key fields for our analysis are:
+---
 
-**InvoiceNo:** Unique identifier for each transaction.
-**StockCode:** Unique identifier for each product.
-**Description:** Name of the product.
-**Quantity:** Number of units per transaction.
-**InvoiceDate:** Date and time of the transaction.
-**UnitPrice:** Price of a single unit in British Pounds (£).
-**CustomerID:** Unique identifier for each customer.
-**Country:** The country where the customer is based.
+## 👩‍💻 About
 
-**Acquisition & Initial Challenge:**
-The dataset was manually downloaded from the source as an Excel (`.xlsx`) file on May 22, 2024, and added to the project repository. Upon initial loading within the Jupyter Notebook using `pd.read_excel()`, a **`'Excel file format cannot be determined'`** error was thrown. This indicated a compatibility issue between the file and pandas' default Excel parsing engines.
+Built by **Shraddha Sajane** — Data Analyst with 3.5 years of experience 
+in financial services (Temenos Kony Infinity banking platform).
 
-**Solution & Rationale:**
-To resolve this and ensure maximum reproducibility and simplicity, the original `.xlsx` file was opened and exported as a **CSV (Comma-Separated Values)** file. The analysis then proceeds using `pd.read_csv()`.
-
-## Analysis Steps
-The project will follow a typical data analysis lifecycle:
-1.  **Data Acquisition & Sourcing** 
-2.  **Data Cleaning & Preprocessing** *(Handling missing values, duplicates, outliers)* 
-3.  **Exploratory Data Analysis (EDA)** *(Uncovering patterns and trends through visualizations)* 
-4.  **Feature Engineering** *(Creating RFM metrics: Recency, Frequency, Monetary Value)*
-5.  **Modeling** *(Using K-Means Clustering for customer segmentation)*
-6.  **Interpretation & Business Recommendations** *(Translating clusters into actionable strategies)*
-
-## How to Run This Project
-1.  Clone this repository:
-    ```bash
-    git clone https://github.com/Shraddha964-dev/ecommerce-customer-analysis.git
-    ```
-2.  Navigate to the project directory.
-3.  Open the Jupyter Notebook:
-    ```bash
-    jupyter notebook notebooks/E-Commerce_Customer_Segmentation_project.ipynb
-    ```
-    
-## Key Insights & Recommendations
-
-### Customer Segments Identified:
-1. **Champions (14.5%):** High-value VIP customers generating 60% of revenue
-2. **Loyal Customers (33.0%):** Regular buyers with strong growth potential  
-3. **New Customers (30.9%):** Recent acquisitions needing onboarding
-4. **At Risk (21.5%):** Inactive customers requiring reactivation
-
-### Strategic Recommendations:
-- **Protect Champions** with exclusive VIP benefits
-- **Grow Loyal Customers** through cross-selling
-- **Activate New Customers** with educational content
-- **Recover At-Risk** with targeted win-back campaigns
-
-### Financial Impact:
-- **Current Revenue:** £7.1M annually
-- **Potential Increase:** £420K+ (6% growth)
-- **Implementation Priority:** Q1 2024
-
-## Dashboard
-![Customer Segmentation Dashboard](customer_segmentation_dashboard.png)
-
-
+[LinkedIn](https://www.linkedin.com/in/shraddha-sajane) | 
+[GitHub](https://github.com/Shraddha964-dev) |
+[SQL Portfolio Project](https://github.com/Shraddha964-dev/banking-transaction-sql-analysis)
