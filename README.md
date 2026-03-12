@@ -6,6 +6,8 @@ An end-to-end data analysis project performing customer segmentation on UK e-com
 ## Project Overview
 This end-to-end data analysis project performs customer segmentation on a UK-based online retail dataset. The goal is to move from a generic marketing strategy to a targeted one by identifying distinct customer groups based on their purchasing behavior. This allows for strategies to retain high-value customers and win back those at risk of churning.
 
+Applied K-Means clustering to 1.07M+ transactions from 4,300+ UK retail customers. Identified 4 behavioral segments — Champion customers (14.5% of base) generate 60% of £7.1M annual revenue. Developed targeted reactivation strategy for At-Risk segment projected to recover £420K+ annually.
+
 ## Business Problem
 The business suffers from inefficient marketing spend by treating all customers the same. The analysis aims to answer:
 - Who are our most valuable customers?
