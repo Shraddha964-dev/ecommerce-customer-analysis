@@ -95,8 +95,6 @@ streamlit run app.py
 
 ---
 
-## 👩‍💻 About
-
 ## 👩‍💻 About ME
 
 I am actively seeking entry-level opportunities in Data Analyst and continuously building projects to strengthen my skills.
