@@ -7,7 +7,11 @@ RFM analysis and K-Means clustering to identify high-value and at-risk customers
 👉 [View Interactive Dashboard](https://ecommerce-customer-analysis-jqzy8aeurhccjtmttyvzw3.streamlit.app/)
 
 ---
+## 📊 Power BI Dashboard
 
+![Dashboard Preview](powerbi_dashboard.png)
+
+---
 ## 📌 Key Results
 
 | Segment | % of Customers | Revenue Contribution |
