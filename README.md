@@ -5,15 +5,15 @@ RFM analysis and K-Means clustering to identify high-value and at-risk customers
 
 ## 📌 Table of Contents
 - [Project Overview](#project-overview)
-- [Live Dashboard](#live-dashboard)
-- [Power BI Dashboard](#Power-bi-dashboard)
-- [Key Result](#key-result)
-- [Business Problem](#business-problem)
-- [Analysis Steps](#analysis-steps)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [How to Run](#how-to-run)
-- [Dataset](#dataset)
+- [Live Dashboard](#-live-dashboard)
+- [Power BI Dashboard](#-Power-bi-dashboard)
+- [Key Results](#-key-results)
+- [Business Problem](#-business-problem)
+- [Analysis Steps](#-analysis-steps)
+- [Tech Stack](#️-tech-stack)
+- [Project Structure](#-project-structure)
+- [How to Run Locally](#️-how-to-run-locally)
+- [Dataset](#-dataset)
 ---
 
 ## Project Overview
