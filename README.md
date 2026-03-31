@@ -3,6 +3,25 @@
 End-to-end customer segmentation on 1.07M+ UK retail transactions using 
 RFM analysis and K-Means clustering to identify high-value and at-risk customers.
 
+## 📌 Table of Contents
+- [Project Overview](#project-overview)
+- [Live Dashboard](#live-dashboard)
+- [Power BI Dashboard](#Power-bi-dashboard)
+- [Key Result](#key-result)
+- [Business Problem](#business-problem)
+- [Analysis Steps](#analysis-steps)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [How to Run](#how-to-run)
+- [Dataset](#dataset)
+---
+
+## Project Overview
+
+This project transforms raw transactional data (~1.07 million rows) from a UK-based online retail store into actionable customer intelligence. Using **RFM (Recency, Frequency, Monetary)** feature engineering and **K-Means clustering**, customers are grouped into 4 distinct behavioral segments — each mapped to a tailored marketing strategy.
+
+---
+
 ## 🚀 Live Dashboard
 👉 [View Interactive Dashboard](https://ecommerce-customer-analysis-jqzy8aeurhccjtmttyvzw3.streamlit.app/)
 
@@ -61,6 +80,7 @@ This project answers:
 | Python (Pandas, NumPy) | Data cleaning & feature engineering |
 | Scikit-learn | K-Means clustering, scaling |
 | Matplotlib, Seaborn | EDA visualizations |
+|Power BI | Dashboard |
 | Streamlit | Interactive dashboard deployment |
 | Jupyter Notebook | Analysis environment |
 | Git & GitHub | Version control |
@@ -70,14 +90,23 @@ This project answers:
 ## 📁 Project Structure
 ```
 ecommerce-customer-analysis/
-├── app.py                          # Streamlit dashboard
-├── requirements.txt                # Dependencies
 ├── data/
-│   ├── raw/                        # Original dataset
-│   └── processed/
-│       └── rfm_clustered.csv       # Final clustered data
-├── notebooks/                      # Jupyter analysis notebooks
-├── images/                         # Visualizations
+│   ├── raw/                               # Original, immutable data (not tracked in Git)
+│   └── processed/                         # Cleaned & feature-engineered data
+├── notebooks/
+│   ├── 02_data_cleaning.ipynb             # Data cleaning & preprocessing
+│   ├── 03_eda.ipynb                       # Exploratory Data Analysis
+│   ├── 04_feature_engineering.ipynb       # RFM metric creation
+│   ├── 05_clustering.ipynb                # K-Means segmentation
+│   ├── 06_recommendations_dashboard.ipynb # Business recommendations
+│   └── E-Commerce_Customer_Segmentation_project.ipynb  # Combined end-to-end notebook
+├── images/                                # Charts and visualisations
+├── app.py                                 # Streamlit app for interactive exploration
+├── powerbi_dashboard.pdf                  # Power BI dashboard (PDF export)
+├── powerbi_dashboard.png                  # Power BI dashboard (preview image)
+├── customer_segmentation_dashboard.png    # Segmentation cluster visualisation
+├── requirements.txt                       # Python dependencies
+├── .gitignore
 └── README.md
 ```
 
